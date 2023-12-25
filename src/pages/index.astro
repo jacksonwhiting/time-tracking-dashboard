@@ -1,31 +1,19 @@
 ---
-// Component Imports
-import Button from "../components/Button.astro"
-import Test from "../components/Test.astro"
+import Root from "../components/Root.tsx"
+import MainLayout from "../layouts/main-layout.astro"
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// const response = await fetch(
+// 	"https://mocki.io/v1/c8d55f84-8d73-408f-8630-4ef474a73b73"
+// )
+// const data = await response.json()
+
+// data.map((category: any) => {
+// 	if (category.title === "Play") {
+// 		console.log(category.timeframes.daily.current)
+// 	}
+// })
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
-
-	<body>
-		<p class="bg-green-500">Test</p>
-		<p class="bg-purple-500">Test2</p>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline"
-				>Markdown is also supported...</a
-			>
-		</div>
-		<p>This is going to be the indicitive of a new branch</p>
-		<Test />
-	</body>
-</html>
+<MainLayout title="Time Tracking Dashboard">
+	<Root />
+</MainLayout>
