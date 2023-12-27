@@ -2,8 +2,8 @@ import { component$ } from "@builder.io/qwik"
 
 export default component$(() => {
 	return (
-		<div class="bg-skin-fill-pri rounded-2xl max-w-[450px] lg:max-w-fit mx-auto">
-			<div class="bg-skin-fill-sec rounded-2xl py-6 px-8 lg:py-10 lg:max-w-[255px]">
+		<div class="bg-skin-fill-pri rounded-2xl max-w-[375px] lg:max-w-[255px]  mx-auto">
+			<div class="bg-skin-fill-sec rounded-2xl py-6 px-8 lg:py-10 ">
 				<div class="flex gap-6 lg:gap-10 items-center lg:flex-col lg:items-start">
 					<img
 						src="/src/images/image-jeremy.png"
