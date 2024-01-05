@@ -1,17 +1,41 @@
 ---
 import Root from "../components/Root.tsx"
+import Test from "../components/Test"
 import MainLayout from "../layouts/main-layout.astro"
 
-// const response = await fetch(
-// 	"https://mocki.io/v1/c8d55f84-8d73-408f-8630-4ef474a73b73"
-// )
-// const data = await response.json()
+export interface timeDataItem {
+	title: string
+	timeframes: {
+		daily: {
+			current: number
+			previous: number
+		}
+		weekly: {
+			current: number
+			previous: number
+		}
+		monthly: {
+			current: number
+			previous: number
+		}
+	}
+}
 
-// data.map((category: any) => {
-// 	if (category.title === "Play") {
-// 		console.log(category.timeframes.daily.current)
-// 	}
-// })
+// export interface timeData extends Array<timeDataItem>
+
+const fetchTimeData = () {
+
+	const response = await fetch(
+		"https://mocki.io/v1/c8d55f84-8d73-408f-8630-4ef474a73b73"
+	)		
+
+	if (response.ok) {
+		const data = await response.json()
+		return data
+	} else {
+		throw new Error ('An error occured while fetching data')	
+	}
+}
 ---
 
 <MainLayout title="Time Tracking Dashboard">
