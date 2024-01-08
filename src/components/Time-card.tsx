@@ -1,5 +1,23 @@
 import { component$, type ClassList } from "@builder.io/qwik"
-import type { timeDataItem } from "../pages/index.astro"
+// import type { timeDataItem } from "../pages/index.astro"
+
+export interface timeDataItem {
+	title?: string
+	timeframes?: {
+		daily: {
+			current: number
+			previous: number
+		}
+		weekly: {
+			current: number
+			previous: number
+		}
+		monthly: {
+			current: number
+			previous: number
+		}
+	}
+}
 
 export default component$<timeDataItem>((props) => {
 	return (
