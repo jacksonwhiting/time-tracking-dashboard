@@ -6,6 +6,7 @@ import {
 } from "@builder.io/qwik"
 import ProfileCard from "./Profile-card"
 import TimeCard from "./Time-card"
+import type { timeDataItems } from "../pages/index.astro"
 
 export interface timeInterval {
 	daily: boolean
@@ -15,7 +16,7 @@ export interface timeInterval {
 
 export const TimeContext = createContextId<timeInterval>("timeInterval")
 
-export default component$(() => {
+export default component$<timeDataItems>((props) => {
 	const timeIntervalState = useStore({
 		daily: false,
 		weekly: true,
@@ -28,7 +29,9 @@ export default component$(() => {
 			<main class="">
 				<div class="my-16 mx-6"></div>
 				<ProfileCard />
-				<TimeCard class="bg-[url('../../src/images/icon-work.svg')]" />
+				{props.map((item) => {
+					return <Time-card title="test" />
+				})}
 			</main>
 		</>
 	)

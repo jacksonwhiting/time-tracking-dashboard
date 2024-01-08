@@ -1,11 +1,11 @@
 ---
 import Root from "../components/Root.tsx"
-import Test from "../components/Test"
+
 import MainLayout from "../layouts/main-layout.astro"
 
 export interface timeDataItem {
-	title: string
-	timeframes: {
+	title?: string
+	timeframes?: {
 		daily: {
 			current: number
 			previous: number
@@ -21,23 +21,27 @@ export interface timeDataItem {
 	}
 }
 
-// export interface timeData extends Array<timeDataItem>
+export type timeDataItems = Array<timeDataItem>
 
-const fetchTimeData = () {
-
-	const response = await fetch(
-		"https://mocki.io/v1/c8d55f84-8d73-408f-8630-4ef474a73b73"
-	)		
-
-	if (response.ok) {
-		const data = await response.json()
-		return data
-	} else {
-		throw new Error ('An error occured while fetching data')	
+const data = await fetch(
+	"https://mocki.io/v1/c8d55f84-8d73-408f-8630-4ef474a73b73"
+).then((response) => {
+	try {
+		if (!response.ok) {
+			throw new Error(
+				"Received a response other than 'ok' when fetching data from the URL "
+			)
+		} else {
+			return response.json()
+		}
+	} catch (error) {
+		console.log(error)
 	}
-}
+})
+
+console.log(data)
 ---
 
 <MainLayout title="Time Tracking Dashboard">
-	<Root />
+	<Root title={data[0].title} />
 </MainLayout>
