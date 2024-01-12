@@ -12,7 +12,7 @@ module.exports = {
 					"study-pri": "#FF5E7D", //Red
 					"exercise-pri": "#4BCF82", //Green
 					"social-pri": "#7335D2", //Purple
-					"self-care-pri": "#F1C75B", //Yellow
+					"selfcare-pri": "#F1C75B", //Yellow
 					"text-pri": "#FFFFFF", //White text
 					"text-sec": "#7078C9",
 					"text-tert": "#BBC0FF",

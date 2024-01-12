@@ -5,7 +5,7 @@ export default component$(() => {
 	const timeInterval = useContext(TimeContext)
 
 	return (
-		<div class="bg-skin-fill-pri rounded-2xl max-w-[375px] lg:max-w-[255px]  mx-auto">
+		<div class="bg-skin-fill-pri rounded-2xl max-w-[375px] lg:max-w-[255px] mx-auto lg:row-span-2">
 			<div class="bg-skin-fill-sec rounded-2xl py-6 px-8 lg:py-10 ">
 				<div class="flex gap-6 lg:gap-10 items-center lg:flex-col lg:items-start">
 					<img
@@ -23,7 +23,7 @@ export default component$(() => {
 			<div class="py-6 px-8 flex justify-between lg:flex-col lg:justify-normal lg:gap-4 lg:items-start">
 				<button
 					onClick$={() => {
-						timeInterval.daily = !timeInterval.daily
+						timeInterval.daily = true
 						timeInterval.weekly = false
 						timeInterval.monthly = false
 					}}
@@ -38,7 +38,7 @@ export default component$(() => {
 				</button>
 				<button
 					onClick$={() => {
-						timeInterval.weekly = !timeInterval.weekly
+						timeInterval.weekly = true
 						timeInterval.daily = false
 						timeInterval.monthly = false
 					}}
@@ -53,7 +53,7 @@ export default component$(() => {
 				</button>
 				<button
 					onClick$={() => {
-						timeInterval.monthly = !timeInterval.monthly
+						timeInterval.monthly = true
 						timeInterval.daily = false
 						timeInterval.weekly = false
 					}}
