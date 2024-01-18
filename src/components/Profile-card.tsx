@@ -9,7 +9,7 @@ export default component$(() => {
 			<div class="bg-skin-fill-sec rounded-2xl py-6 px-8 lg:py-10 ">
 				<div class="flex gap-6 lg:gap-10 items-center lg:flex-col lg:items-start">
 					<img
-						src="/src/images/image-jeremy.png"
+						src="/image-jeremy.png"
 						decoding="async"
 						alt="Jeremy Robson Avatar"
 						class="w-[64px] min-h-[64px] lg:w-[78px] rounded-full border-2 border-skin-text-pri"

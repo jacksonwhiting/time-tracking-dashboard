@@ -1,37 +1,37 @@
 export const cardVisuals = [
 	{
 		Work: {
-			icon: "bg-[url('../../src/images/icon-work.svg')]",
+			icon: "bg-[url('/icon-work.svg')]",
 			bgColor: "bg-skin-work-pri",
 		},
 	},
 	{
 		Play: {
-			icon: "bg-[url(../../src/images/icon-play.svg)]",
+			icon: "bg-[url(/icon-play.svg)]",
 			bgColor: "bg-skin-play-pri",
 		},
 	},
 	{
 		Study: {
-			icon: "bg-[url(../../src/images/icon-study.svg)]",
+			icon: "bg-[url(/icon-study.svg)]",
 			bgColor: "bg-skin-study-pri",
 		},
 	},
 	{
 		Exercise: {
-			icon: "bg-[url(../../src/images/icon-exercise.svg)]",
+			icon: "bg-[url(/icon-exercise.svg)]",
 			bgColor: "bg-skin-exercise-pri",
 		},
 	},
 	{
 		Social: {
-			icon: "bg-[url(../../src/images/icon-social.svg)]",
+			icon: "bg-[url(/icon-social.svg)]",
 			bgColor: "bg-skin-social-pri",
 		},
 	},
 	{
 		"Self Care": {
-			icon: "bg-[url(../../src/images/icon-self-care.svg)]",
+			icon: "bg-[url(/icon-self-care.svg)]",
 			bgColor: "bg-skin-selfcare-pri",
 		},
 	},
