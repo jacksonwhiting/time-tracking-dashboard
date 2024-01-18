@@ -8,7 +8,6 @@ import ProfileCard from "./Profile-card"
 
 import TimeCard from "./Time-card.tsx"
 import type { timeDataItem } from "./Time-card"
-import { Test } from "./Test"
 
 export interface timeInterval {
 	daily: boolean
@@ -17,12 +16,6 @@ export interface timeInterval {
 }
 
 export const TimeContext = createContextId<timeInterval>("timeInterval")
-
-/*
-1. Change background of each time card based on time category (work, play etc)
-2. Check the store to see which timeInterval is true, then display the data for that time interval
-	- Ex. If weekly is true - display weekly.current and weekly.previous
-*/
 
 export default component$((props: { timeData: timeDataItem[] }) => {
 	const timeIntervalState = useStore({
