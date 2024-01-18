@@ -102,7 +102,9 @@ export default component$((props: timeDataItem) => {
 						return (
 							value && (
 								<span class="text-skin-text-tert">
-									Last Week -{" "}
+									{key === "daily" && value && "Yesterday"}
+									{key === "weekly" && value && "Last Week"}
+									{key === "monthly" && value && "Last Month"} -{" "}
 									{
 										props[
 											"timeframes" as keyof typeof props.timeframes
